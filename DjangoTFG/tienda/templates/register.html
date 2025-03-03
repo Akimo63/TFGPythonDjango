@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}" />
+    {% block extra_css %}
+
+    {% endblock %}
+    <title>Registro</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      <h1>Registrarse</h1>
+      <input type="text" name="username" required placeholder="usuario" /><br />
+      <input type="email" name="email" required placeholder="Email" /><br />
+      <input
+        type="password"
+        name="password"
+        required
+        placeholder="Password"
+      /><br />
+      <button type="submit">Registrar</button>
+      <section>
+        <p>Ya tienes cuenta? <a href="/login">Iniciar Session</a><br></p>
+        <br />
+        <p>Para volver a la WKI <a href="/">Wiki</a><br></p>
+        <br />
+        <p>
+          Para volver a la Tienda
+          <a href="">Tienda</a>
+        </p>
+      </section>
+    </form>
+  </body>
+</html>
