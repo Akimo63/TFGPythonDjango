@@ -24,5 +24,7 @@ urlpatterns = [
     path('signin/', views.signin, name='signin'),
     path('register/', views.signup, name='register'),
     path('login/', views.login, name='login'),
-    path('tienda/', views.tienda, name='tienda')
+    path('logout/', views.signout, name='logout'),
+    path('tienda/', views.tienda, name='tienda'),
+    path('categoria/<int:categoria_id>/', views.categoria, name='categoria')
 ]
