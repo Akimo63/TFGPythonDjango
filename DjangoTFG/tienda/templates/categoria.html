@@ -1,7 +1,5 @@
 {% extends 'cabtiend.html' %}
-
 {% load static %}
-
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
@@ -10,18 +8,19 @@
 
 {% block content %}
 <h1>tienda</h1>
-<h2>Categorias</h2>
+<h2>Productos</h2>
 <ul>
-    {% for categoria in categorias %}
+    {% for producto in productos %}
     <li>            
-        <a href="{% url 'categoria' categoria.id %}">
-            <h1>{{categoria.nombre}} </h1>
-            <p>{{categoria.description}} </p>
+        <a href="{% url 'producto' producto.id %}">
+            <h1>{{producto.nombre}} </h1>
+            <p>{{producto.description}} </p>
         </a>        
     </li>
     {% empty %}
-    <li>No hay categorías disponibles.</li>
+    <li>No hay productos disponibles.</li>
     {% endfor %}
     </ul>
 {% endblock %}
+
 
